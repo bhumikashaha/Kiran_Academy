@@ -13,20 +13,16 @@ public class AnagramCheck {
 
         System.out.print("Enter second word: ");
         String word2 = sc.nextLine();
-
-        // Remove spaces and convert to lowercase
+    
         word1 = word1.replaceAll("\\s+", "").toLowerCase();
         word2 = word2.replaceAll("\\s+", "").toLowerCase();
 
-        // Convert strings into character arrays
         char[] charArray1 = word1.toCharArray();
         char[] charArray2 = word2.toCharArray();
 
-        // Sort character arrays
         Arrays.sort(charArray1);
         Arrays.sort(charArray2);
-
-        // Compare sorted arrays
+        
         if (Arrays.equals(charArray1, charArray2)) {
             System.out.println("The words are Anagrams");
         }
